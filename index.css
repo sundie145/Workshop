@@ -115,14 +115,14 @@ color: #fff;
     height: 17vw;
     object-fit: calc();
     border-radius: 10px;
-    border: 5px solid rgb(0, 0, 0,0.5); /* กำหนดขอบสีแดง หนา 5px */
-    padding: 5px; /* เพิ่มพื้นที่ว่างภายในกรอบ */
+    border: 5px solid rgb(0, 0, 0,0.5); 
+    padding: 5px; 
 }
 .modal,
 .modal-bg {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* ความมืดของพื้นหลัง */
+    background: rgba(0, 0, 0, 0.5); 
     position: fixed;
     top: 0;
     left: 0;
@@ -137,10 +137,10 @@ color: #fff;
     max-width: 90vw;
     max-height: 30vw;
     overflow: auto;
-    background: #fff; /* สีขาวสำหรับโมดอล */
-    border-radius: 10px; /* ขอบมนเพิ่มความสวยงาม */
+    background: #fff; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
-                0 6px 20px rgba(0, 0, 0, 0.19); /* เพิ่มเงา */
+                0 6px 20px rgba(0, 0, 0, 0.19); 
     padding: 20px; /* เพิ่มพื้นที่ว่างภายใน */
     
 }
@@ -189,40 +189,40 @@ margin-left: 10px;
     align-items: center;
 }
 .cartlist-left {
-    display: flex; /* ใช้ Flexbox */
-    align-items: center; /* จัดให้องค์ประกอบในแนวตั้งอยู่กึ่งกลาง */
-    gap: 10px; /* เพิ่มช่องว่างระหว่างภาพและรายละเอียด */
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
     padding: 10px;
-    border: 1px solid #ccc; /* เพิ่มเส้นขอบ */
-    border-radius: 5px; /* มุมโค้งมน */
-    background-color: #f9f9f9; /* พื้นหลังสีอ่อน */
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
   }
 
   .cartlist-left img {
-    width: 50px; /* ปรับขนาดรูปภาพ */
+    width: 50px; 
     height: 50px;
-    object-fit: cover; /* ตัดรูปให้พอดีกรอบ */
-    border-radius: 5px; /* เพิ่มความโค้งให้รูป */
+    object-fit: cover; 
+    border-radius: 5px; 
   margin-right: 10px;
 }
 
   .cartlist-detai {
     display: flex;
-    flex-direction: column; /* จัดข้อความในแนวตั้ง */
-    justify-content: center; /* จัดตำแหน่งข้อความให้อยู่กึ่งกลาง */
+    flex-direction: column; 
+    justify-content: center; 
   }
 
   .cartlist-detai p {
-    margin: 0; /* ลบระยะขอบของย่อหน้า */
+    margin: 0; 
   }
 
   .cartlist-detai p:first-child {
-    font-weight: bold; /* ทำให้ชื่อสินค้าเป็นตัวหนา */
-    color: #333; /* เปลี่ยนสีข้อความ */
+    font-weight: bold; 
+    color: #333;
   }
 
   .cartlist-detai p:last-child {
-    color: #f56a00; /* สีสำหรับราคา */
+    color: #f56a00; 
     font-size: 16px;
   }
   .btnc{
