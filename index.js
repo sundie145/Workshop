@@ -241,17 +241,15 @@ var cart = [];
 function addtocart() {
     let pass = true;
 
-    // ตรวจสอบสินค้าที่ซ้ำในตะกร้า
     for (let i = 0; i < cart.length; i++) {
         if (productindex === cart[i].index) {
             console.log('found same product');
-            cart[i].count++; // เพิ่มจำนวนสินค้าที่มีอยู่ในตะกร้า
+            cart[i].count++; 
             pass = false;
             break;
         }
     }
 
-    // ถ้าไม่ซ้ำ เพิ่มสินค้าใหม่ลงในตะกร้า
     if (pass) {
         const obj = {
             index: productindex,
@@ -265,10 +263,8 @@ function addtocart() {
         cart.push(obj);
     }
 
-    // แสดงข้อมูลตะกร้าใน Console
     console.log(cart);
 
-    // แสดงข้อความแจ้งเตือน
     if (typeof Swal !== "undefined") {
         Swal.fire({
             icon: 'success',
@@ -314,10 +310,10 @@ function rendercart() {
 function deinitems(action, index) {
     if (action == '-') {
         if (cart[index].count > 0) {
-            cart[index].count--; // ลดจำนวน
-            $(`#countitems${index}`).text(cart[index].count); // อัปเดตจำนวนใน UI
+            cart[index].count--; 
+            $(`#countitems${index}`).text(cart[index].count); 
 
-            // ลบสินค้าออกจากตะกร้าเมื่อจำนวนเป็น 0
+           
             if (cart[index].count === 0) {
                 Swal.fire({
                     icon: 'warning',
@@ -328,20 +324,20 @@ function deinitems(action, index) {
                     cancelButtonText: 'Cancel'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        cart.splice(index, 1); // ลบสินค้าจากตะกร้า
-                        rendercart(); // เรียกฟังก์ชันอัปเดต UI
+                        cart.splice(index, 1); 
+                        rendercart(); 
                         $("#cartcount").css('display', 'flex').text(cart.length);
                         if(cart.length <= 0)
                             $("#cartcount").css('display', 'none')
                     } else {
-                        cart[index].count = 1; // รีเซ็ตจำนวนกลับเป็น 1
+                        cart[index].count = 1; 
                         $(`#countitems${index}`).text(cart[index].count);
                     }
                 });
             }
         }
     } else if (action == '+') {
-        cart[index].count++; // เพิ่มจำนวน
-        $(`#countitems${index}`).text(cart[index].count); // อัปเดตจำนวนใน UI
+        cart[index].count++; 
+        $(`#countitems${index}`).text(cart[index].count); 
     }
 }
